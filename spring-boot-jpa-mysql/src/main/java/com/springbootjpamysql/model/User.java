@@ -1,4 +1,4 @@
-package com.springbootdemo.model;
+package com.springbootjpamysql.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

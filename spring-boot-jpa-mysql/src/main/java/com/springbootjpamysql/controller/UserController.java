@@ -1,4 +1,4 @@
-package com.springbootdemo.controller;
+package com.springbootjpamysql.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.springbootdemo.model.User;
-import com.springbootdemo.repository.UserRepository;
+import com.springbootjpamysql.model.User;
+import com.springbootjpamysql.repository.UserRepository;
 
 @Controller // This means that this class is a Controller
 @RequestMapping(path = "/demo") // This means URL's start with /demo (after Application path)
