@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>accessing-data-mysql-complete</artifactId>
+	<artifactId>spring-boot-jpa-mysql</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>accessing-data-mysql-complete</name>
+	<name>spring-boot-jpa-mysql</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
