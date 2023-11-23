@@ -1,14 +1,24 @@
 version: "3.1.5"
 services:
-  db:
+  mysql:
     image: mysql:latest
-    restart: always
+    restart: unless-stopped
     environment:
-      MYSQL_PASSWORD: 12345678
-      MYSQL_USER: sa
       MYSQL_DATABASE: test
       MYSQL_ROOT_PASSWORD: 12345678
     ports:
       - "3307:3306"
-    volumes:
-      - ./data:/var/lib/MYSQLql/data
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/test?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=12345678
+    depends_on:
+      - mysql

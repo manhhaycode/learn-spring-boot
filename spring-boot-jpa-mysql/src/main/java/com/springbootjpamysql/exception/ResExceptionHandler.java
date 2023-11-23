@@ -28,6 +28,14 @@ public class ResExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler({ Exception.class })
+    public ResponseEntity<ErrorMessage> handleNotFoundException(Exception ex) {
+        // Handle the exception and return an appropriate response
+        ErrorMessage errorMessage = new ErrorMessage(HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST,
+                ex.getMessage());
+        return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
+    }
+
     // Add more exception handlers as needed
 
 }
