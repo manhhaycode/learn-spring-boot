@@ -1,0 +1,14 @@
+version: "3.1.5"
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_PASSWORD: 12345678
+      MYSQL_USER: sa
+      MYSQL_DATABASE: test
+      MYSQL_ROOT_PASSWORD: 12345678
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./data:/var/lib/MYSQLql/data
