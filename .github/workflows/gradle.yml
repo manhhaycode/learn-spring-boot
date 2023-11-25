@@ -28,6 +28,7 @@ jobs:
           java-version: "17"
           distribution: "temurin"
       - name: change path
-        run: cd springboot-jpa-mysql-gradle
+        run: cd
       - name: Build with Gradle
+        working-directory: springboot-jpa-mysql-gradle
         run: ./gradlew build
