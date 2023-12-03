@@ -24,7 +24,11 @@ public class UserService {
 
     // get user by id
     public User getUserById(String id) {
-        return userRepository.findById(id).orElse(null);
+        User user = userRepository.findById(id).orElse(null);
+        if (user == null) {
+            throw new DataException(USER_NOT_FOUND, null);
+        }
+        return user;
     }
 
     // update user by id

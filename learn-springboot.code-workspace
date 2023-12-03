@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "springboot-jpa-lombok"
+	},
+	{
+		"path": "spring-boot-jpa-mysql"
+	},
+	{
+		"path": "springboot-jpa-mysql-gradle"
+	}
+]
+}
